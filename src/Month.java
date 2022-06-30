@@ -1,9 +1,10 @@
 class Month {
-    public void displayMonth(int month) {
-        if (month>12){
-            System.out.println("Sorry we have only 12 months in the year!");
-        }else if (month<=0) {
-            System.out.println("Sorry we don't have this month in calendar!");
+    public String displayMonth(int month) {
+        String message = null;
+        if (month > 12) {
+            message = "Sorry we have only 12 months in the year!";
+        } else if (month <= 0) {
+            message ="Sorry we don't have this month in calendar!";
         }
 
         switch (month) {
@@ -43,8 +44,7 @@ class Month {
             case 12:
                 System.out.println("December");
                 break;
-
-
         }
+        return message;
     }
 }
